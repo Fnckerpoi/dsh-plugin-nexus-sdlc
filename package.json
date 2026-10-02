@@ -1,0 +1,105 @@
+{
+  "name": "dsh-plugin-nexus-sdlc",
+  "version": "1.0.0",
+  "description": "Spec-driven development preset with Claude Code planning/review and Codex implementation tools for DeepSeek Harness",
+  "type": "module",
+  "license": "MIT",
+  "author": "Fnckerpoi",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fnckerpoi/dsh-plugin-nexus-sdlc.git"
+  },
+  "homepage": "https://github.com/Fnckerpoi/dsh-plugin-nexus-sdlc#readme",
+  "bugs": {
+    "url": "https://github.com/Fnckerpoi/dsh-plugin-nexus-sdlc/issues"
+  },
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "agent-preset",
+    "spec-driven-development",
+    "workflow"
+  ],
+  "engines": {
+    "node": ">=22.19.0"
+  },
+  "files": [
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE",
+    "THIRD_PARTY_NOTICES.md"
+  ],
+  "scripts": {
+    "test": "node --test",
+    "test:host": "node scripts/check-host.mjs"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/dsh-agent-preset": "0.2.0-rc.2",
+    "@deepseek-ai/dsh-agent-preset-registry": "0.2.0-rc.2",
+    "@deepseek-ai/dsh-persona": "0.2.0-rc.2",
+    "@deepseek-ai/dsh-tool-bash": "0.2.0-rc.2",
+    "@deepseek-ai/dsh-tool-fs": "0.2.0-rc.2",
+    "@deepseek-ai/dsh-tool-fs-search": "0.2.0-rc.2",
+    "@deepseek-ai/dsh-tool-jobs": "0.2.0-rc.2",
+    "@deepseek-ai/dsh-command-goal": "0.2.0-rc.2",
+    "@deepseek-ai/dsh-tool-goal": "0.2.0-rc.2",
+    "@deepseek-ai/dsh-plan-mode": "0.2.0-rc.2",
+    "@deepseek-ai/dsh-tool-subagent": "0.2.0-rc.2",
+    "@deepseek-ai/dsh-subagent-codex": "0.2.0-rc.2",
+    "@deepseek-ai/dsh-subagent-claude-code": "0.2.0-rc.2"
+  },
+  "peerDependenciesMeta": {
+    "@deepseek-ai/dsh-agent-preset": {
+      "optional": true
+    },
+    "@deepseek-ai/dsh-agent-preset-registry": {
+      "optional": true
+    },
+    "@deepseek-ai/dsh-persona": {
+      "optional": true
+    },
+    "@deepseek-ai/dsh-tool-bash": {
+      "optional": true
+    },
+    "@deepseek-ai/dsh-tool-fs": {
+      "optional": true
+    },
+    "@deepseek-ai/dsh-tool-fs-search": {
+      "optional": true
+    },
+    "@deepseek-ai/dsh-tool-jobs": {
+      "optional": true
+    },
+    "@deepseek-ai/dsh-command-goal": {
+      "optional": true
+    },
+    "@deepseek-ai/dsh-tool-goal": {
+      "optional": true
+    },
+    "@deepseek-ai/dsh-plan-mode": {
+      "optional": true
+    },
+    "@deepseek-ai/dsh-tool-subagent": {
+      "optional": true
+    },
+    "@deepseek-ai/dsh-subagent-codex": {
+      "optional": true
+    },
+    "@deepseek-ai/dsh-subagent-claude-code": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "js-yaml": "^4.1.0",
+    "semver": "^7.7.2"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}
